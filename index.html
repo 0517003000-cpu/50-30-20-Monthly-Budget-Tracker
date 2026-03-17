@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Budget Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Monthly Budget Tracker</h1>
+
+<input id="name" placeholder="Name">
+<input id="income" placeholder="Monthly Income">
+
+<select id="monthSelect"></select>
+<button onclick="newMonth()">+ New Month</button>
+
+<select id="language" onchange="changeLang()">
+<option value="en">English</option>
+<option value="id">Indonesia</option>
+</select>
+
+<br><br>
+
+<a href="https://0517003000-cpu.github.io/50-30-20-Monthly-Budget-Calculator/" target="_blank">
+Budget Calculator
+</a>
+
+<div class="tables">
+
+<!-- ESSENTIAL -->
+<table class="budget-table">
+<tr class="title"><th colspan="3">Essential Expenses</th></tr>
+
+<tr>
+<td>Available Income</td>
+<td colspan="2" contenteditable id="budgetEssential"></td>
+</tr>
+
+<tr><th>Expense</th><th>Cost</th><th>Notes</th></tr>
+<tbody id="essential"></tbody>
+
+<tr><td>Total</td><td colspan="2" id="totalEssential">0</td></tr>
+<tr><td>Status</td><td colspan="2" id="statusEssential">-</td></tr>
+</table>
+
+<!-- NON -->
+<table class="budget-table">
+<tr class="title"><th colspan="3">Non Essential Expenses</th></tr>
+
+<tr>
+<td>Available Income</td>
+<td colspan="2" contenteditable id="budgetNon"></td>
+</tr>
+
+<tr><th>Expense</th><th>Cost</th><th>Notes</th></tr>
+<tbody id="non"></tbody>
+
+<tr><td>Total</td><td colspan="2" id="totalNon">0</td></tr>
+<tr><td>Status</td><td colspan="2" id="statusNon">-</td></tr>
+</table>
+
+<!-- SAVINGS -->
+<table class="budget-table">
+<tr class="title"><th colspan="3">Savings</th></tr>
+
+<tr>
+<td>Available Income</td>
+<td colspan="2" contenteditable id="budgetSavings"></td>
+</tr>
+
+<tr><th>Type</th><th>Amount</th><th>Notes</th></tr>
+<tbody id="savings"></tbody>
+
+<tr><td>Total</td><td colspan="2" id="totalSavings">0</td></tr>
+<tr><td>Recommendation</td><td colspan="2" id="statusSavings">-</td></tr>
+</table>
+
+</div>
+
+<div class="advice">
+<h2 id="adviceTitle">Budget Advice</h2>
+<div id="adviceText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
